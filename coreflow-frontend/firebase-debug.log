@@ -1,0 +1,75 @@
+[debug] [2026-05-06T13:20:03.390Z] ----------------------------------------------------------------------
+[debug] [2026-05-06T13:20:03.392Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\akura\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init apphosting
+[debug] [2026-05-06T13:20:03.393Z] CLI Version:   15.16.0
+[debug] [2026-05-06T13:20:03.393Z] Platform:      win32
+[debug] [2026-05-06T13:20:03.393Z] Node Version:  v24.14.0
+[debug] [2026-05-06T13:20:03.393Z] Time:          Wed May 06 2026 10:20:03 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2026-05-06T13:20:03.393Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\akura\.gemini\antigravity\scratch\CoreFlow\coreflow-frontend
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2026-05-06T13:20:29.117Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-06T13:20:29.117Z] > authorizing via signed-in user (contate.raposo@gmail.com)
+[debug] [2026-05-06T13:20:41.236Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:20:41.237Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:20:41.238Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-05-06T13:20:41.238Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"CoreFlow"}
+[debug] [2026-05-06T13:20:41.923Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2026-05-06T13:20:41.923Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"coreflow-74075"}
+[debug] [2026-05-06T13:20:55.692Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:20:55.692Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:20:55.692Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2026-05-06T13:20:55.692Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"testesteaeera"}
+[debug] [2026-05-06T13:20:56.115Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2026-05-06T13:20:56.115Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_AVAILABLE","suggestedProjectId":"testesteaeera"}
+[debug] [2026-05-06T13:21:02.238Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:21:02.238Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:21:02.239Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2026-05-06T13:21:02.239Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"testesteaeera","name":"CoreFlow"}
+[debug] [2026-05-06T13:21:03.241Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2026-05-06T13:21:03.241Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.7094731388325292347"}
+[debug] [2026-05-06T13:21:03.242Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:21:03.242Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:21:03.242Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7094731388325292347 [none]
+[debug] [2026-05-06T13:21:04.021Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7094731388325292347 200
+[debug] [2026-05-06T13:21:04.021Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7094731388325292347 {"name":"operations/create_project.global.7094731388325292347"}
+[debug] [2026-05-06T13:21:04.522Z] [Project Creation Poller] Retrying task index 0
+[debug] [2026-05-06T13:21:04.523Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:21:04.523Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:21:04.523Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7094731388325292347 [none]
+[debug] [2026-05-06T13:21:04.731Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7094731388325292347 200
+[debug] [2026-05-06T13:21:04.732Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7094731388325292347 {"name":"operations/create_project.global.7094731388325292347"}
+[debug] [2026-05-06T13:21:05.732Z] [Project Creation Poller] Retrying task index 0
+[debug] [2026-05-06T13:21:05.732Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:21:05.732Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:21:05.732Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7094731388325292347 [none]
+[debug] [2026-05-06T13:21:05.915Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7094731388325292347 200
+[debug] [2026-05-06T13:21:05.916Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7094731388325292347 {"name":"operations/create_project.global.7094731388325292347","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"996714114898","projectId":"testesteaeera","lifecycleState":"ACTIVE","name":"CoreFlow","createTime":"2026-05-06T13:21:01.128Z"}}
+[debug] [2026-05-06T13:21:05.917Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:21:05.917Z] Checked if tokens are valid: true, expires at: 1778077191898
+[debug] [2026-05-06T13:21:05.917Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/testesteaeera:addFirebase [none]
+[debug] [2026-05-06T13:21:07.696Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/testesteaeera:addFirebase 403
+[debug] [2026-05-06T13:21:07.696Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/testesteaeera:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-05-06T13:21:07.696Z] Request to https://firebase.googleapis.com/v1beta1/projects/testesteaeera:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2026-05-06T13:21:07.844Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/testesteaeera:addFirebase had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\akura\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\akura\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
