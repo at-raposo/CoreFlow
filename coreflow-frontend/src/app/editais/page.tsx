@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FileText, ChevronRight, Loader2, Trash2 } from "lucide-react";
+import { API_URL } from "@/lib/api";
+
 
 export default function EditaisPage() {
   const [editais, setEditais] = useState<any[]>([]);
@@ -10,7 +12,8 @@ export default function EditaisPage() {
   const router = useRouter();
 
   const fetchEditais = () => {
-    fetch("http://localhost:8000/api/editais/")
+    fetch(`${API_URL}/api/editais/`)
+
       .then((res) => res.json())
       .then((data) => {
         setEditais(data);
@@ -27,7 +30,8 @@ export default function EditaisPage() {
     if (!confirm("Tem certeza que deseja apagar este edital e todo o seu progresso?")) return;
     
     try {
-      const res = await fetch(`http://localhost:8000/api/editais/${id}`, {
+      const res = await fetch(`${API_URL}/api/editais/${id}`, {
+
         method: 'DELETE'
       });
       if (res.ok) {

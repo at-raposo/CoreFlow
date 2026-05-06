@@ -5,6 +5,8 @@ import { useParams, useRouter } from "next/navigation";
 import { FileText, ArrowLeft, CheckCircle2, Circle, Target, Loader2, ChevronDown, ChevronRight, Square, CheckSquare } from "lucide-react";
 import { toast } from "sonner";
 import clsx from "clsx";
+import { API_URL } from "@/lib/api";
+
 
 export default function EditalSkillTree() {
   const { id } = useParams();
@@ -19,7 +21,8 @@ export default function EditalSkillTree() {
   }, [id]);
 
   const fetchEdital = () => {
-    fetch(`http://localhost:8000/api/editais/${id}`)
+    fetch(`${API_URL}/api/editais/${id}`)
+
       .then((res) => res.json())
       .then((data) => {
         setEdital(data);
@@ -36,7 +39,8 @@ export default function EditalSkillTree() {
   const handleStudyCheckIn = async (topicId: string) => {
     setCheckingIn(topicId);
     try {
-      const res = await fetch(`http://localhost:8000/api/study/toggle/${topicId}`, {
+      const res = await fetch(`${API_URL}/api/study/toggle/${topicId}`, {
+
         method: "POST"
       });
       if (res.ok) {

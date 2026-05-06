@@ -6,6 +6,8 @@ import clsx from "clsx";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
+import { API_URL } from "@/lib/api";
+
 
 export default function QgPage() {
   const { energy, setEnergy } = useEnergyStore();
@@ -90,7 +92,8 @@ export default function QgPage() {
       try {
         // Map store energy to backend enum
         const stateMap = { high: "high_focus", neutral: "neutral", low: "low_focus" };
-        const res = await fetch(`http://localhost:8000/api/missions?energy_state=${stateMap[energy]}`);
+        const res = await fetch(`${API_URL}/api/missions?energy_state=${stateMap[energy]}`);
+
         if (res.ok) {
           const data = await res.json();
           setMissions(data);
@@ -139,7 +142,8 @@ export default function QgPage() {
     const fetchQcStats = async () => {
       setIsSyncingQc(true);
       try {
-        const res = await fetch("http://localhost:8000/api/sync/qc/stats");
+        const res = await fetch(`${API_URL}/api/sync/qc/stats`);
+
         if (res.ok) {
           const data = await res.json();
           setQcStats(data);
@@ -169,7 +173,8 @@ export default function QgPage() {
     toast("Analisando PDF...", { description: "Buscando os cargos disponíveis no edital." });
 
     try {
-      const res = await fetch("http://localhost:8000/api/editais/extract-cargos", {
+      const res = await fetch(`${API_URL}/api/editais/extract-cargos`, {
+
         method: "POST",
         body: formData,
       });
@@ -196,7 +201,8 @@ export default function QgPage() {
     toast("Gerando Skill Tree...", { description: `Extraindo subtópicos para: ${cargoName}` });
 
     try {
-      const res = await fetch("http://localhost:8000/api/editais/parse-cargo", {
+      const res = await fetch(`${API_URL}/api/editais/parse-cargo`, {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

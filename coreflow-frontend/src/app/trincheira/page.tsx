@@ -5,6 +5,8 @@ import { CheckCircle2, ChevronRight, Play, Zap, ShieldAlert } from "lucide-react
 import { toast } from "sonner";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
+import { API_URL } from "@/lib/api";
+
 
 // Os ícones mapeados pela resposta da API
 const getIconForType = (type: string) => {
@@ -26,7 +28,8 @@ export default function TrincheiraPage() {
     setIsLoading(true);
     try {
       const energyQuery = energy === "high" ? "high_focus" : energy === "low" ? "low_focus" : "neutral";
-      const res = await fetch(`http://localhost:8000/api/missions?energy_state=${energyQuery}`);
+      const res = await fetch(`${API_URL}/api/missions?energy_state=${energyQuery}`);
+
       const data = await res.json();
       setMissions(data);
       // Extrair missões que vieram completas do banco (se aplicável)
@@ -53,7 +56,8 @@ export default function TrincheiraPage() {
     }
 
     try {
-      await fetch(`http://localhost:8000/api/missions/${mission.id}/toggle`, {
+      await fetch(`${API_URL}/api/missions/${mission.id}/toggle`, {
+
         method: "PUT"
       });
     } catch (e) {
@@ -67,7 +71,8 @@ export default function TrincheiraPage() {
     if (!newMissionTitle.trim()) return;
 
     try {
-      const res = await fetch("http://localhost:8000/api/missions", {
+      const res = await fetch(`${API_URL}/api/missions`, {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
